@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './fonts.css';
+
+
+@font-face {
+    font-family: 'IranianSans';
+    src: url('../public/fonts/IranianSans.ttf') format('truetype');
+
+}
+body {
+    font-family: vazir !important;
+  }

@@ -1,0 +1,22 @@
+.faq-transition-enter {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  .faq-transition-enter-active {
+    max-height: 100px; /* Adjust based on your content */
+    opacity: 1;
+  }
+  
+  .faq-transition-exit {
+    max-height: 100px; /* Adjust based on your content */
+    opacity: 1;
+    transition: max-height 0.3s ease-in, opacity 0.3s ease-in;
+  }
+  
+  .faq-transition-exit-active {
+    max-height: 0;
+    opacity: 0;
+  }
+  
