@@ -1,19 +1,17 @@
-import Faq from "../Faq/Faq";
-import Header from "../Header/Header";
-import Popular from "../Popular/Popular";
-import Section from "../Section/Section";
-import Slider from "../Slider/Slider";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "../Home/Home";
+import Test from "../Test/Test";
 
 const App = () => {
-    return ( 
-        <>
-        <Header />
-        <Slider />
-        <Popular />
-        <Section />
-        <Faq/>
-        </>
-     );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/test" element={<Test/>} />
+            </Routes>
+
+        </BrowserRouter>
+    );
 }
  
 export default App;

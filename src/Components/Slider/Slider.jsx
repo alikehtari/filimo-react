@@ -1,4 +1,4 @@
-import React, { useRef, useState ,useEffect } from 'react';
+import React, { useRef, useState ,useEffect, useContext } from 'react';
 import axios from 'axios';
 
 // Import Swiper React components
@@ -15,24 +15,27 @@ import './styles.css';
 // import required modules
 import { EffectFade, Navigation, Pagination , Autoplay } from 'swiper/modules';
 import Box from './Box';
+import { myContext } from '../Home/Home';
 
 
 const Slider = () => {
 
-    const [sliders , setSliders] = useState(null)
+  const {sliders} = useContext(myContext)
 
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await axios.get('https://filimo.alikehtari.ir/api/v1/slider/');
-            setSliders(response.data);
-          } catch (error) {
-            console.error(error);
-          }
-        };
-        fetchData()
+    // const [sliders , setSliders] = useState(null)
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const response = await axios.get('https://filimo.alikehtari.ir/api/v1/slider/');
+    //         setSliders(response.data);
+    //       } catch (error) {
+    //         console.error(error);
+    //       }
+    //     };
+    //     fetchData()
     
-      }, [])
+    //   }, [])
 
     return (
         <div className='relative overflow-hidden bg-black'>
